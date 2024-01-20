@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      .custom-width {
+        width: 40px;
+        height: 40px;
+      }
+
+      .green-color {
+        color: #006400;
+      }
+
+      .red-color {
+        color: red;
+      }
+
+      .custom-tr-height {
+        line-height: 10%;
+      }
+
+      table {
+        table-layout: fixed;
+        max-width: 250px;
+      }
+
+    </style> 
+  </head>
+  <body>
+    <main data-bs-theme="light">
+      <div class="card d-flex text-center position-absolute top-50 start-50 translate-middle">
+        <div class="card-body">
+          <table class="table table-bordered table-dark" style="background-color: #212529">
+            <thead>
+              <tr>
+                <th colspan="4">
+                  <button id="clickToChangeMode" style="background-color: transparent; border: 0;" onclick="changeMode()">
+                    <img id="lightDarkMode" src="./images/Light mode.png" alt="" height="25px">
+                  </button>
+                </th>
+              </tr>
+              <tr class="custom-tr-height text-truncate d-flex flex-row align-content-stretch flex-nowrap justify-content-end" style="border-color: #212529; width: 249px; font-size: smaller;">
+                <th id="history" colspan="4" style="text-align: right;"></th>
+              </tr>
+              <tr class="border-top-0">
+                <th id="inputResult" colspan="4" style="text-align-last: right;">0</th>
+              </tr>
+            </thead>
+            <tbody id="inputBox">
+              <tr>
+                <td><button id="ac" class="custom-width green-color" onclick="clearAll()">AC</button></th>
+                <td><button id="plus-minus" class="custom-width green-color" onclick="plusMinus()">+/-</button></td>
+                <td><button id="percent" class="custom-width green-color" onclick="percentage()">%</button></td>
+                <td><button id="divide" class="custom-width red-color" onclick="operator(' / ')">&#247;</button></td>
+              </tr>
+              <tr>
+                <td><button id="7" class="custom-width" onclick="input(7)">7</button></td>
+                <td><button id="8" class="custom-width" onclick="input(8)">8</button></td>
+                <td><button id="9" class="custom-width" onclick="input(9)">9</button></td>
+                <td><button id="multiply" class="custom-width red-color" onclick="operator(' * ')">x</button></td>
+              </tr>
+              <tr>
+                <td><button id="4" class="custom-width" onclick="input(4)">4</button></td>
+                <td><button id="5" class="custom-width" onclick="input(5)">5</button></td>
+                <td><button id="6" class="custom-width" onclick="input(6)">6</button></td>
+                <td><button id="substract" class="custom-width red-color" onclick="operator(' - ')">-</button></td>
+              </tr>
+              <tr>
+                <td><button id="1" class="custom-width" onclick="input(1)">1</button></td>
+                <td><button id="2" class="custom-width" onclick="input(2)">2</button></td>
+                <td><button id="3" class="custom-width" onclick="input(3)">3</button></td>
+                <td><button id="add" class="custom-width red-color" onclick="operator(' + ')">+</button></td>
+              </tr>
+              <tr>
+                <td><button id="c" class="custom-width" onclick="clearInput()">C</button></td>
+                <td><button id="0" class="custom-width" onclick="input(0)">0</button></td>
+                <td><button id="dot" class="custom-width" onclick="decimal()">.</button></td>
+                <td><button id="equal" class="custom-width red-color" onclick="calculate()">=</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </body> 
+      
+    </html>  
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
